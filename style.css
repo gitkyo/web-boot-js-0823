@@ -1,0 +1,16 @@
+.col{
+    background-color: aquamarine;
+    border: 1px solid #fff;
+}
+
+.cls{
+    background-color: rgb(91, 212, 20);
+    border: 1px solid #fff;
+}
+
+.avatar{
+    margin: 0 auto;
+    width: 200px;
+    display: inherit;
+    margin-top: 14px;
+}

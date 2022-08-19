@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- add bootstrap from node module -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <!-- un conteneur fullscreen : https://getbootstrap.com/docs/5.2/layout/containers/ -->
+    <div class="container-fluid text-center" style="background-color: teal; color: white;">
+        <h1>Welcome to the Home Page</h1>
+    </div>
+    
+    <!-- un autre contenur normal -->
+    <div class="container">
+        
+        <!-- un premiere ligne : https://getbootstrap.com/docs/5.2/layout/grid/ -->
+        <div class="row text-center">
+            <div class="col">
+               <p>Donec sollicitudin molestie malesuada. Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
+            </div>
+            <div class="col"><p>Donec sollicitudin molestie malesuada. Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus suscipit tortor eget felis porttitor volutpat.</p></div>
+            <div class="col"><p>Donec sollicitudin molestie malesuada. Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus suscipit tortor eget felis porttitor volutpat.</p></div>
+        </div>
+ 
+        
+        <div class="row text-center">            
+            <div class="col">
+                <p>Donec sollicitudin molestie malesuada. Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
+                <div class="row">
+                    <div class="col-6">Col 6 </div>
+                    <div class="col-6">Col 6 </div>
+                </div>
+            </div>
+            <div class="col"><p>Donec sollicitudin molestie malesuada. Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus suscipit tortor eget felis porttitor volutpat.</p></div>
+        </div>
+    
+
+        <br>
+
+        <div class="row text-center">            
+            <div class="cls col-md-4 col-xl-6"><p>Colonne 4 : "col-4" <br> sollicitudin molestie malesuada. Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus suscipit tortor eget felis porttitor volutpat.</p></div>
+            <div class="cls col-md-8 col-xl-6"><p>Colonne 8 : "col-8" <br> Donec sollicitudin molestie malesuada. Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus suscipit tortor eget felis porttitor volutpat.</p></div>
+        </div>
+
+
+        <div class="row text-center">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://nodejs.org/static/images/logo.svg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col">
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" aria-label="Success example" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar bg-info" role="progressbar" aria-label="Info example" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar bg-warning" role="progressbar" aria-label="Warning example" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar bg-danger" role="progressbar" aria-label="Danger example" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div> <!-- fin du container -->
+
+    <script src="index.js"></script>
+</body>
+</html>
