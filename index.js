@@ -88,6 +88,56 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     }
 
+    /*
+        test de chart.js
+    */
+
+    //ecriture 1 
+    //function initChart() {  }
+
+    //ecriture 2 (arrow function)
+    let initChart = () => {
+        const labels = [
+            'January',
+            'February',
+            'March',
+            'April',
+            'May',
+            'June',
+            'Juillet',
+            'Aout',
+        ];
+    
+        const data = {
+            labels: labels,
+            datasets: [{
+                label: 'My First dataset',
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: [0, 10, 5, 2, 20, 30, 45, 10],
+            }]
+        };
+    
+        const config = {
+            type: 'line',
+            data: data,
+            options: {
+                responsive: true,
+            }
+        };
+        
+        //
+        const myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+        );
+    
+    
+    }
+    
+    //appel de la fonction
+    initChart();
+
 
 
  })
