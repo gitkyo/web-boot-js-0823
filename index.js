@@ -139,6 +139,53 @@ window.addEventListener("DOMContentLoaded", (event) => {
     initChart();
 
 
+    /*
+        Test de leaflet.js
+    */
+    let initMap = () => {
+        
+        //création de la carte
+        var map = L.map('map').setView([-21.34, 55.47], 13);
+
+        //ajout d'un marker
+        var marker = L.marker([-21.34, 55.47]).addTo(map);
+        //ajout du message lors du clic sur le marker
+        marker.bindPopup("<b>Hi, Marker 1 </b><br>I am a popup.").openPopup();
+
+        //ajout d'un 2eme marker
+        var marker2 = L.marker([-21.34, 55.48]).addTo(map);
+        //ajout du message lors du clic sur le marker
+        marker2.bindPopup("<b>Hi Maker 2 !</b><br>I am a popup.").openPopup();
+
+        //ajout d'un cerlce
+        var circle = L.circle([-21.34, 55.47], {
+            color: 'teal',
+            fillColor: '#fff',
+            fillOpacity: 0.5,
+            radius: 500
+        }).addTo(map);
+        //message lors du clicl sur le cercle
+        circle.bindPopup("I am a circle.");
+
+        //ajout du fond de carte ici openstreetmap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
+
+        //Fonction qui se déclenche lorsqu'on clic sur la carte
+        function onMapClick(e) {
+            conbsole.log("You clicked the map at " + e.latlng);
+        }
+        //attaché l'événement click à la carte        
+        map.on('click', onMapClick);
+
+    }
+
+    //appel d'initMAp
+    initMap();
+
+
 
  })
 

@@ -20,3 +20,5 @@
    display: inherit;
    margin-top: 14px;
 }
+
+#map { height: 500px; }
