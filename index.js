@@ -67,7 +67,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
         .done(function( response ) {
 
             //ici mes instruction pour traiter la réponse
-            console.log(response);
+            // console.log(response);
 
             //on récupere une url dans la réponse
             let media = response.results[0].media[0].gif.url;
@@ -184,6 +184,58 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     //appel d'initMAp
     initMap();
+
+
+    //test objets 
+    // ici une arrow function avec un parametre
+    let testObj = (monObject) => {
+
+        //affichage de l'objet
+        console.log(monObject);
+
+        //changement de la valeur de la propriété age
+        monObject.age++;
+
+        //set nouvelle propriété
+        monObject.nickname = "Pierro";
+
+        // set nouvelle propriété avec crochets pour mettre une clef en multi-mots
+        monObject["likes birds"] = true;
+
+        console.log(monObject);
+
+        //suppression de la propriété age
+        delete monObject.age;
+
+        //test si une clef existe dans l'objet
+        if("age" in monObject == false) console.log("Y'a plus d'age !")
+
+        //exemple de parcours d'un objet
+        for(let key in monObject) {
+            
+            //affichage de la clef (name, age, city...)
+            console.log(key);
+
+            //affichage de la valeur de la clef (pierre, 35, ...
+            console.log(monObject[key]);
+        }
+        
+
+        console.log(monObject);
+        // console.log(monObject.name);
+        // console.log(monObject.age);
+        // console.log(monObject.city);
+    }
+
+    //création d'un objet
+    let obj = {
+        name: 'Pierre',
+        age: 35,
+        city: 'St-Pierre'
+    };
+  
+    //appel de la fonction avec l'objet en parametre
+    testObj(obj);
 
 
 
