@@ -107,7 +107,41 @@ window.addEventListener("DOMContentLoaded", (event) => {
             'Juillet',
             'Aout',
         ];
-    
+
+        
+        //exemple de parcours avec foreach
+        labels.foreach((mois) =>{
+
+            console.log(mois);
+            
+        });
+
+        //exemple de parcours avec for of
+        for(let mois of labels){
+            console.log(mois);
+        }
+
+        //ecriture 1 , le switch
+        // let a = 2 + 2;
+        // switch (a) {
+        //     case 3:
+        //         alert( 'Too small' );
+        //     case 4:
+        //         alert( 'Exactly!' );
+        //     case 5:
+        //         alert( 'Too big' );
+        //     default:
+        //         alert( "I don't know such values" );
+        // }
+
+        //ecriture 2 avec le if else
+        // if(a == 3) alert( 'Too small' );
+        // else if(a == 4) alert( 'Exactly!' );
+        // else if(a == 5) alert( 'Too big' );
+        // else alert( "I don't know such values" );
+
+
+        
         const data = {
             labels: labels,
             datasets: [{
