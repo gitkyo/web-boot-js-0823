@@ -109,8 +109,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
         ];
 
         
-        //exemple de parcours avec foreach
-        labels.foreach((mois) =>{
+        //exemple de parcours avec foreach        
+        labels.forEach((mois) =>{
 
             console.log(mois);
             
