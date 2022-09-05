@@ -9,28 +9,39 @@ window.addEventListener("DOMContentLoaded", (event) => {
     // objectif : fecth data on https://api.github.com/users/gitkyo
 
     let user = 'gitkyo';
-    let url = `https://api.github.com/users/${user}`;
+    let url = `https://api.github.com1/users/${user}`;
+    let urlLocal = 'http://127.0.0.1:5500/db/user.json';
 
 
     async function getAvatarFromGitUrl(){
 
-        //await car fetch est un methode qui renvoi une promesse
-        let response = await fetch(url);
+        //try pour essayer du code et catch pour attraper les erreurs
+        try{
+            //await car fetch est un methode qui renvoi une promesse
+            let response = await fetch(urlLocal);
 
-        //vérification de la réponse via le code status 200
-        if(response.status === 200){
-      
-            //on récupère le contenu de la réponse
-            let data = await response.json();
+            //vérification de la réponse via le code status 200
+            if(response.status === 200){
+        
+                //on récupère le contenu de la réponse
+                let data = await response.json();
+                
+                //affichage
+                // console.log(data);
+                let imSrc = data.avatar_url;
+                return imSrc;
+
+            }
+        }
+        catch(error){        
             
-            //affichage
-            // console.log(data);
-            let imSrc = data.avatar_url;
-            return imSrc;
-
+            //throw pour lancer une erreur
+            throw new Error('Cause -> ',  {cause : error});
         }
 
     }
+
+       
 
 
     //exemple de récuperation de données depuis une promess avec then
